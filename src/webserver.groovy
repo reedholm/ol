@@ -2,7 +2,10 @@
  * Created by Reedholm on 7/2/16.
  * Actually, this code is by Renato Athaydes, from
  * a blog post he wrote. Copies of this can also be
- * found on Github.
+ * found on Github.  Renato's code is just a modified
+ * version of the Jetty base example, which I found
+ * several of on the web and Github.
+ *
  * I added the server.join() call after reading Jetty
  * documentation stating it would make sure the server
  * would join the current thread.
@@ -39,7 +42,6 @@ def startJetty() {
     handler.addServlet(GroovyServlet, '/scripts/*')
     def filesHolder = handler.addServlet(DefaultServlet, '/')
     filesHolder.setInitParameter('resourceBase', './public')
-
     server.handler = handler
     server.start()
     server.join()
