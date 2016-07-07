@@ -5,10 +5,17 @@
 </head>
 <body>
 <p>
-This is the default page of an ownlocal REST API code test by applicant Jon Reedholm,
+This project is of an ownlocal REST API code test by applicant Jon Reedholm,
 written in Groovy, using Apache Jetty for the server and copying GitHub example of
 Groovy/Jetty server as starting point.
 </p>
+<p>
+Development was done in IntelliJ CE on a Mac. To run you will also have to download Groovy and Jetty.
+I did using homebrew:
+<ul>
+<li>brew install groovy</li>
+<li> brew install jetty</li>
+</ul>
 <p>The API is called via the ownlocalapi.groovy script in the scripts folder, using curl:</p>
 <li>curl -H "businesses:{} http://localhost:8080/scripts/ownlocalapi.groovy <b>(default call, 50 businesses per page, all records)</b></li>
 <li>curl -H "businesses:{id:[500]} http://localhost:8080/scripts/ownlocalapi.groovy <b>(get business with id=500)</b></li>
